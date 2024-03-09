@@ -12,13 +12,10 @@
             <a href="home.html"><img src="logo.png"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">GET HELP</a></li>
-                    <li><a href="">GIVE HELP</a></li>
-                    <li><a href="">CHAT WITH US</a></li>
-                    <li><a href="">RESOURCES</a></li>
-                    <li><a href="">CONTACT US</a></li>
-                    <li><a href="">LOG IN</a></li>
+                    <li><a href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('volunteer') }}">VOLUNTEER</a></li>
+                    <li><a href="{{ url_for('chat') }}">CHAT WITH US</a></li>
+                    <li><a href="{{ url_for('resources') }}">RESOURCES</a></li>
                 </ul>
             </div>
         </nav>
