@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/') # render home page
-def index():
+def home():
    return render_template('home.html')
 
 @app.route('/volunteer') # render volunteer page
