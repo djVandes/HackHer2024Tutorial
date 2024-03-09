@@ -3,13 +3,13 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Serve Kingston Youth</title>
-    <link href="home.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static',filename='css/home.css') }}" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
     <section class="header">
         <nav>
-            <a href="home.html"><img src="logo.png"></a>
+            <a href="home.html"><img src="{{ url_for('static',filename='img/logo.png') }}"></a>
             <div class="nav-links">
                 <ul>
                     <li><a href="{{ url_for('home') }}">HOME</a></li>
