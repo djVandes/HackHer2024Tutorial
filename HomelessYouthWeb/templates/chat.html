@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Banks and Food Programs</title>
-    <link rel="stylesheet" href="../static/css/chat.css">
-</head>
-<body>
-<script>
-  var prompts = {{ prompts|tojson }};
-  console.log(prompts);
-</script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+  <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+
+  {% block style %}{% endblock %}
+  {% block script %}
+  <script>
+    var prompts = {{ prompts|tojson }};
+    console.log(prompts);
+  </script>
+  {% endblock %}
+
+{% block content %}
   <div class="container">
     <h1> <strong>Give</strong> help or <strong>Get </strong> help</h1>
     <div id="default-text-bubble-left" class="text-bubble text-bubble-left" onclick="textToSpeech(this)">
@@ -38,5 +43,4 @@
       <button type="submit" onclick="sendMessage();">Send Request</button>
     </div>
   </div>
-</body>
-</html>
+{% endblock %}
