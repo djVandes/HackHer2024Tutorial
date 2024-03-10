@@ -12,6 +12,56 @@ body {
     color: #fff;
 }
 
+/* Style the navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+}
+
+/* Style the logo image */
+nav img {
+    width: 80px;
+}
+
+/* Style the navigation links */
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff336f;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover:after{
+    width: 100%;
+}
+
 .apply-now {
     max-width: 500px;
     margin: 0 auto;
