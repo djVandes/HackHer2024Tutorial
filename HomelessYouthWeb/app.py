@@ -5,16 +5,16 @@ app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/') # render home page
-def index():
+def home():
    return render_template('home.html')
 
-@app.route('/volunteer') # render volunteer page
-def volunteer():
-    return render_template('volunteer.html')
+@app.route('/foodbanks') # render volunteer page
+def foodbanks():
+    return render_template('foodbanks.html')
 
-@app.route('/resources') #render resources page
-def resources():
-   return render_template('resources.html')
+@app.route('/shelters') #render resources page
+def shelters():
+   return render_template('shelters.html')
 
 prompts = []
 

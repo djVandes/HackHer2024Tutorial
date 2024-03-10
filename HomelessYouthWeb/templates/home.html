@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Serve Kingston Youth</title>
-    <link href="home.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static',filename='css/home.css') }}" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -11,13 +11,13 @@
 <body>
     <section class="header">
         <nav>
-            <a href="home.html"><img src="logo.png"></a>
+            <a href="home.html"><img src="{{ url_for('static',filename='img/logo.png') }}"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href="{{ url_for('index') }}">HOME</a></li>
-                    <li><a href="{{ url_for('volunteer') }}">VOLUNTEER</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('foodbanks') }}">FOOD BANKS</a></li>
+                    <li><a href="{{ url_for('shelters') }}">SHELTERS</a></li>
                     <li><a href="{{ url_for('chat') }}">CHAT WITH US</a></li>
-                    <li><a href="{{ url_for('resources') }}">RESOURCES</a></li>
                 </ul>
             </div>
         </nav>
