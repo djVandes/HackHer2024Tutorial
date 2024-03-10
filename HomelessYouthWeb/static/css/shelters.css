@@ -1,0 +1,51 @@
+body {
+    background-color: #caf0f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #03045e;
+    color: #fff;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.resources {
+    margin-top: 30px;
+}
+
+.section__title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #03045e;
+}
+
+.experiences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.shelter {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shelter h2 {
+    margin-bottom: 10px;
+}
+
+.shelter p {
+    margin-bottom: 10px;
+    color: #333;
+}

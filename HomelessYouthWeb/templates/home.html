@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Serve Kingston Youth</title>
-    <link href="{{ url_for('static',filename='css/home.css') }}" rel="stylesheet" type="text/css">
+    <link href="../static/css/home.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -11,22 +11,45 @@
 <body>
     <section class="header">
         <nav>
-            <a href="home.html"><img src="{{ url_for('static',filename='img/logo.png') }}"></a>
+            <a href="{{ url_for('static',filename='css/home.css') }}"><img src="../static/img/logo.png"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href="{{ url_for('home') }}">HOME</a></li>
-                    <li><a href="{{ url_for('foodbanks') }}">FOOD BANKS</a></li>
-                    <li><a href="{{ url_for('shelters') }}">SHELTERS</a></li>
-                    <li><a href="{{ url_for('chat') }}">CHAT WITH US</a></li>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="foodbanks.html">FOOD BANKS</a></li>
+                    <li><a href="shelters.html">SHELTERS</a></li>
+                    <li><a href="chat.html">CHAT WITH US</a></li>
                 </ul>
             </div>
         </nav>
-
-    <div class="text-box">
-        <h1>About us</h1>
-        <p>This tool efficiently connects individuals with local food banks and shelters, streamlining access to crucial resources. Additionally, it provides a platform for those interested in community service to find volunteer opportunities. By utilizing this straightforward website, users can navigate essential information, contribute their time to support the homeless population, and play a role in fostering a more supportive community in Kingston. 
-
-        </p>
     </section>
+
+        <section class="text-box">
+            <h1>About us</h1>
+            <p>Serve Kingston Youth is a Kingston-based humanitarian resource connecting both youth in need and youth hoping to volunteer<br>
+                 to local food banks and shelters. Advertised initiatives aim to provide essential support to those in need and provide awareness<br>
+                  to the Kingston community regarding the homeless youth population. <br> <br>
+                Explore Shelters to find general information for local organizations providing support and shelter,<br>
+                as well as Food Banks to find meal-times and volunteer opportunities nearby.  
+                 <br> <br> <br>
+                 Volunteer with us and help in bringing smileson faces
+                 <br> <br>
+            <a href="applynow.html" class="button">APPLY NOW</a></p>
+        </section>
+        
+        <section class="services">
+            <h1>Services We Offer</h1>
+            <ul>
+                <li>Volunteering</li>
+                <li>Donation and Fundraising</li>
+                <li>Food Banks</li>
+                <li>Shelters</li>
+            </ul>
+        </section>
+
+        <section class="footer">
+            <h4>Contact us</h4>
+            <p>For any query or for collaborating with us. Please amail us on servekingstonyouth@gmail.com</p>
+        </section>
+
 </body>
 </html>
