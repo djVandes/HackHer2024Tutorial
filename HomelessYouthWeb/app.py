@@ -31,21 +31,22 @@ answers = [
     "If you're facing difficulties with rent and affording groceries, you can seek assistance from the Kingston Food Bank. They provide food assistance to individuals in need and may also offer support for housing-related issues. You can visit their location at 140 Hickson Avenue, Kingston, Ontario, during their operating hours or contact them through their website for further assistance. Additionally, you can find their phone number listed on their website for direct contact."    "Yummers!",
     #My home isn't safe and I need a place to stay tonight
     "If you're in need of a safe place to stay tonight due to an unsafe home environment, you can seek assistance from Kingston Interval House. They provide shelter and support for individuals experiencing domestic violence. You can contact them at their helpline: (613) 546-1833, available 24/7, or visit their location at 237 Wellington Street, Kingston, Ontario, for immediate assistance. Additionally, you can access their phone number through their website for further inquiries.",
-    #Where can i donate to help at risk youth
-    "If you're looking to donate to support at-risk youth in Kingston, you can consider reaching out to organizations like Kingston Youth Shelter. They provide various services and support to youth experiencing homelessness or at risk of homelessness. You can contact them at their location: 234 Brock Street, Kingston, Ontario, during their operating hours, or find their phone number on their website for further information on how you can contribute to their cause."
-    ]
+    #Where can I donate to help at risk youth?
+    "If you're looking to donate to support at-risk youth in Kingston, you can consider reaching out to organizations like Kingston Youth Shelter. They provide various services and support to youth experiencing homelessness or at risk of homelessness. You can contact them at their location: 234 Brock Street, Kingston, Ontario, during their operating hours, or find their phone number on their website for further information on how you can contribute to their cause."]
 
+r = 0
 @app.route('/get_response', methods=['GET'])
 def get_response():
+    global r
     if request.method == 'GET':
         rp = request.args["roleplaying"]
         prompt = request.args["msg"]
         print(prompt)
         print(rp)
 
-        r = random.randint(0, 5)
+        #r = random.randint(0, 5)
         result = answers[r]
-        #r = (r+1) % 5
+        r = (r+1) % 5
 
         prompts.append(prompt)
         prompts.append(result)
@@ -53,4 +54,4 @@ def get_response():
         return jsonify(result)
 
 if __name__ == "__main__":
-  app.run(debug=True)
+    app.run(debug=True)
