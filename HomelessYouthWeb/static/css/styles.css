@@ -1,9 +1,16 @@
 body {
-   background-color: white;
+   background-color: #dcdbf8;
 }
 
 .container > h1 > strong {
   color: darkblue;
+  --fs-h1: 4.5rem
+}
+
+.container > h2 {
+
+  color: darkblue;
+  --fs-h2: 2 rem
 }
 
 .container > a {
